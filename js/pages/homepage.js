@@ -9,7 +9,7 @@ const retrieveSensorsData = () => fetch('/data/homepage-data.json')
     .catch(err => console.log("Oh no", err))
 
 
-const createSensorCardImg = sensor => {
+const createSensorCardImg = (sensor) => {
     const $sensorImg = document.createElement('img')
 
     $sensorImg.classList.add('sensor-img')
@@ -21,7 +21,7 @@ const createSensorCardImg = sensor => {
 }
 
 
-const createSensorCardInfo = sensor => {
+const createSensorCardInfo = (sensor) => {
     const $sensorInfo = document.createElement('div')
     $sensorInfo.classList.add('sensor-info')
     
