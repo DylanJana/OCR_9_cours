@@ -311,5 +311,8 @@ img {
 }
 
 .sensor-details-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 400px auto;
+    grid-template-rows: 500px;
+    grid-column-gap: 40px;
 }
