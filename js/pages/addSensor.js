@@ -12,10 +12,10 @@ const handleGeolocation = () => {
         }
     }
 
-    const onError = error => {}
+    const onError = error => { console.log("Error", error)}
 
     if ("geolocation" in navigator) {
-        navigator.geolocation.getCurrentPosition(onError, onSuccess)
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }
 }
 
