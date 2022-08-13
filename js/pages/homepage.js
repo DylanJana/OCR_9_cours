@@ -4,9 +4,9 @@ const $dropdownForm = document.querySelector('.dropdown-form')
 const ITEMS_PER_PAGE = 8
 
 const retrieveSensorsData = () => fetch('/data/homepage-data.json')
-    .then(res => res.json)
+    .then(res => res.json())
     .then(data => data.facades)
-    .catch(err => {})
+    .catch(err => {console.log("error ", err)})
 
 
 const createSensorCardImg = sensor => {
@@ -111,6 +111,7 @@ $dropdownForm.addEventListener('change', function(e) {
 
 const main = async () => {
     const sensorsData = await retrieveSensorsData()
+    console.log("SENSOR ", sensorsData)
     
     createPagination(sensorsData.length)
     
