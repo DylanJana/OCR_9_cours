@@ -10,7 +10,7 @@ const $sensorLastInspectionDate = document.querySelector('.sensor-last-inspectio
 const $sensorEngineerId = document.querySelector('.sensor-engineer-id')
 
 // Images Gallery
-const $sensorMainImg = document.querySelector('.sensor-details-img')
+const $sensorMainImg = document.querySelector('.sensor-details-img');
 
 // Weather Forecast data table
 const $weatherLocation = document.querySelector('.weather-location')
@@ -69,10 +69,10 @@ const handleSensorImagesGallery = sensorData => {
 }
 
 
-const main = () => {
-    const sensorData = retrieveSensorData()
+const main = async () => {
+    const sensorData = await retrieveSensorData()
 
-    const weatherForecastData = retrieveWeatherForecastData(sensorData.coordinates, true)
+    const weatherForecastData = await retrieveWeatherForecastData(sensorData.coordinates, false)
 
     fillSensorTable(sensorData)
     handleSensorImagesGallery(sensorData)

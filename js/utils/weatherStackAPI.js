@@ -1,4 +1,4 @@
-const ACCESS_KEY = ''
+const ACCESS_KEY = '54aca7d8d36d865166da9c780f631a5d';
 
 const _retrieveWeatherForecastMockedData = () => fetch('/data/weather-api-mocked-data.json')
 .then(res => res.json())
@@ -12,7 +12,7 @@ const _retrieveWeatherForecastApiData = coordinates => fetch(`http://api.weather
 
 const retrieveWeatherForecastData = async (coordinates, isMocked) => {
     if (isMocked) {
-        return await _retrieveWeatherForecastMockedData()
+        return  await _retrieveWeatherForecastMockedData()
     }
-    return await _retrieveWeatherForecastApiData(coordinates)
+    return  await _retrieveWeatherForecastApiData(coordinates)
 }
